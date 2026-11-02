@@ -1,0 +1,7 @@
+{"fonte": "Colab A100, gpu_homog_rs_bent.py, 02/11/2026",
+ "controles": [
+  {"n": 12, "degrees": [2], "anf_orbits": 6, "functions": 64, "pass_weight_filter": 16, "gpu_survivors": 16, "bent_verified": 16, "nota": "todas contem [0,6]; bate com CPU (diagonal_analise_m8.py)"},
+  {"n": 12, "degrees": [3], "anf_orbits": 19, "functions": 524288, "pass_weight_filter": 32878, "gpu_survivors": 36, "bent_verified": 0},
+  {"n": 8, "degrees": [4], "anf_orbits": 10, "functions": 1024, "pass_weight_filter": 2, "gpu_survivors": 0, "bent_verified": 0},
+  {"n": 8, "degrees": [2], "anf_orbits": 4, "functions": 16, "pass_weight_filter": 8, "gpu_survivors": 8, "bent_verified": 8}
+ ]}
