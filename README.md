@@ -2,7 +2,15 @@
 
 This is an exhaustive search over all 2^43 homogeneous degree-4 rotation symmetric (RS) Boolean functions in 12 variables. **None is bent.**
 
-The search independently confirms the result of F. Vono, *Nonexistence of homogeneous rotation symmetric bent functions of degree four in twelve variables* (figshare 34737294, 2026). The code is written from scratch and shares nothing with that paper's proof.
+The search independently confirms the result of F. Vono, *Nonexistence of homogeneous rotation symmetric bent functions of degree four in twelve variables* ([Figshare version 2](https://doi.org/10.6084/m9.figshare.34737294.v2), published 31 October 2026). The implementation uses a separate GPU enumeration and CPU Walsh verification. This repository records a computational confirmation; it does not by itself establish independence of all assumptions or a Lean proof.
+
+## Scope and related evidence
+
+The recorded search is dated **2 November 2026**. Its JSON reports `overflow: false`: all 34,748 GPU survivors fit in the output buffer and are reported as checked by the full CPU Walsh transform. This documentation update did not rerun the GPU search.
+
+For future runs, inspect `overflow`. If it is true, the current implementation checks only the stored survivors; zero verified bent functions then **does not establish nonexistence** for that run. A code change to refuse such conclusions remains pending.
+
+The [main research catalogue](https://github.com/contatofilipevono-rgb/hrsbf-bent-verification/blob/main/docs/RESULTADOS_ATUAIS.md) distinguishes the formal H12 theorem, the external chart enumeration and this separate GPU enumeration. Their survivor counts refer to different filters and must not be added or equated. The theorem concerns homogeneous degree four in twelve variables, not H16 or all functions of degree at most four.
 
 ## Result (`results/h12_quartic_independente_a100.json`)
 
